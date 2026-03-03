@@ -10,6 +10,11 @@ export default defineConfig(({mode}) => {
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
+    preview: {
+      host: true,
+      port: 3000,
+      allowedHosts: ["health-medical-insurance.cypsolabs.com","www.health-medical-insurance.cypsolabs.com"],
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
